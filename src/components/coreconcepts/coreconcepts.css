@@ -1,0 +1,19 @@
+#core-concepts {
+  margin: 2rem;
+}
+
+#core-concepts ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+}
+
+#core-concepts li {
+  text-align: center;
+}
+
+#core-concepts img {
+  width: 6rem;
+  height: 6rem;
+}
