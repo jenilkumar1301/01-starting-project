@@ -1,0 +1,27 @@
+#examples menu {
+  display: flex;
+  gap: 1rem;
+  margin: 0 0 2rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+#examples button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #ebe7ef;
+  font: inherit;
+  cursor: pointer;
+}
+
+#examples button:hover {
+  background: #1f082f;
+  color: #ebe7ef;
+}
+
+#examples button.active {
+  background: #7925d3;
+  color: #ebe7ef;
+}
