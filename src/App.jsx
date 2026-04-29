@@ -1,8 +1,8 @@
 import { EXAMPLES } from './data.js';
 import Header from './components/header/header.jsx';
-import TabButton from './components/TabButton/TabButton.jsx';
 import { useState } from 'react';
 import CoreConceptss from './components/coreconcepts/coreconceptss.jsx';
+import Examples from './components/examples/Examples.jsx';
 
 function App() {
   const [selectedTopic, setSelectedTopic] = useState();
@@ -26,31 +26,17 @@ function App() {
     );
   }
 
+    
   return (
     <div>
       <Header />
       <main>
         <CoreConceptss /> 
-
-        <section id="examples">
-          <h2>Examples</h2>
-          <menu>
-            <TabButton isSelected = {selectedTopic === 'components'} onSelect={() => handleSelect('components')}>
-              Components
-            </TabButton>
-            <TabButton isSelected = {selectedTopic === 'jsx'} onSelect={() => handleSelect('jsx')}>
-              JSX
-            </TabButton>
-            <TabButton isSelected = {selectedTopic === 'props'} onSelect={() => handleSelect('props')}>
-              Props
-            </TabButton>
-            <TabButton isSelected = {selectedTopic === 'state'} onSelect={() => handleSelect('state')}>
-              State
-            </TabButton>
-          </menu>
-
-          {tabContent}
-        </section>
+         <Examples
+        selectedTopic={selectedTopic}
+        onSelect={handleSelect}
+        tabContent={tabContent}
+        />
       </main>
     </div>
   );
